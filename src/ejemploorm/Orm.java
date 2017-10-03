@@ -21,9 +21,9 @@ public class Orm {
         return executeHQLQuery(query);
     }
     
-    public Persona getPersonabyId(int id) {
-        Persona persona = new Persona();
-        return persona;
+    public Persona getPersonaById(int id) {
+        List resultList = executeHQLQuery(query.concat(" WHERE P.idpersona = ").concat(String.valueOf(id)));
+        return (Persona) resultList.get(0);
     }
     
     public int savePersona(Persona persona) {
