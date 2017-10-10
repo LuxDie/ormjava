@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ejemploorm;
+package ormjava;
 
 import java.io.Serializable;
 import java.util.List;
@@ -23,14 +23,18 @@ public class Orm {
     
     public Persona getPersonaById(int id) {
         List resultList = executeHQLQuery(query.concat(" WHERE P.idpersona = ").concat(String.valueOf(id)));
-        return (Persona) resultList.get(0);
+        Persona persona = null;
+        if (!resultList.isEmpty()) {
+            persona = (Persona) resultList.get(0);
+        }
+        return persona;
     }
     
     public int savePersona(Persona persona) {
         return save(persona);
     }
     
-    private String query = "from Persona";
+    private String query = "from Persona P";
     
     private List executeHQLQuery(String hql) {
         List resultList = null;
