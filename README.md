@@ -1,4 +1,4 @@
-# ormjava
+# ORM Java
 Un pequeño ejemplo de Hibernate y Java para los alumnos de Codo a Codo.
 En este proyecto podemos ver en funcionamiento una clase `Orm`, con 3 métodos:
 `getPersonaList()`, `getPersonaById()` y `savePersona()`. Con ellos podremos
@@ -7,8 +7,9 @@ manteniendo una separación entre la capa de datos y su implementación específ
 
 ## Instrucciones
 
-Abrir el proyecto en NetBeans. Luego ejecutar el siguiente script en un servidor
-MySQL activo:
+El directorio raíz es un proyecto de NetBeans.
+
+La aplicación requiere una base de datos MySQL con su configuración predeterminada y la siguiente estructura de datos (ejecutar el siguiente script en una consola, por ej: MySQL Workbench):
 
 ```sql
 CREATE SCHEMA `ormjava`;
