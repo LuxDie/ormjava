@@ -3,11 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Código/Ejemplos%20y%20pruebas/hibertest/src/hibernate.cfg.xml</file>
-            <file>file:/D:/Código/Ejemplos%20y%20pruebas/hibertest/src/ejemploorm/testFrame.java</file>
-            <file>file:/D:/Código/Ejemplos%20y%20pruebas/hibertest/src/ejemploorm/Orm.java</file>
-            <file>file:/D:/Código/Ejemplos%20y%20pruebas/hibertest/src/ejemploorm/hibernate.reveng.xml</file>
-            <file>file:/D:/Código/Ejemplos%20y%20pruebas/hibertest/src/ejemploorm/Persona.java</file>
+            <file>file:/D:/Código/Ejemplos%20y%20pruebas/Java/ormjava/src/ormjava/testFrame.java</file>
+            <file>file:/D:/Código/Ejemplos%20y%20pruebas/Java/ormjava/src/ormjava/Orm.java</file>
+            <file>file:/D:/Código/Ejemplos%20y%20pruebas/Java/ormjava/src/ormjava/Persona.java</file>
+            <file>file:/D:/Código/Ejemplos%20y%20pruebas/Java/ormjava/README.md</file>
         </group>
     </open-files>
 </project-private>

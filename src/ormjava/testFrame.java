@@ -5,38 +5,19 @@
  */
 package ormjava;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 import javax.swing.table.DefaultTableModel;
-import javax.transaction.Transactional;
-import org.hibernate.HibernateException;
-import org.hibernate.Query;
-import org.hibernate.Session;
-
 /**
  *
  * @author ezequ
  */
 public class testFrame extends javax.swing.JFrame {
     
-    private Orm orm = new Orm();
-    private static String query = "from Persona";
-    
-    private List executeHQLQuery(String hql) {
-        List resultList = new ArrayList();
-        try {
-            Session session = HibernateUtil.getSessionFactory().openSession();
-            session.beginTransaction();
-            Query q = session.createQuery(hql);
-            resultList = q.list();
-            session.getTransaction().commit();
-        } catch (HibernateException he) {
-            he.printStackTrace();
-        }
-        return resultList;
-    }
-    private void displayResult(List resultList) {
+    private final Orm orm = new Orm();
+
+    private void updateGrid() {
+        List resultList = orm.getPersonaList();
         Vector<String> tableHeaders = new Vector<String>();
         Vector tableData = new Vector();
         tableHeaders.add("ID");
@@ -63,7 +44,7 @@ public class testFrame extends javax.swing.JFrame {
      */
     public testFrame() {
         initComponents();
-        displayResult(executeHQLQuery(query));
+        updateGrid();
     }
 
     /**
@@ -249,7 +230,7 @@ public class testFrame extends javax.swing.JFrame {
         persona.setDni(dniTxt.getText());
         persona.setEdad(Integer.parseInt(edadTxt.getText()));
         orm.savePersona(persona);
-        displayResult(executeHQLQuery(query));
+        updateGrid();
     }//GEN-LAST:event_addBtnActionPerformed
 
     private void searchBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBtnActionPerformed
